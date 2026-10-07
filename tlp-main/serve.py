@@ -40,11 +40,6 @@ class SpaHandler(SimpleHTTPRequestHandler):
             self.path = (path.rstrip("/") + "/index.html") if path != "/" else "/index.html"
             return SimpleHTTPRequestHandler.do_GET(self)
 
-        # Keep the nested frontend's client-side routes inside its own SPA.
-        if path.startswith("/tlp-main/") and (ROOT / "tlp-main" / "index.html").is_file():
-            self.path = "/tlp-main/index.html"
-            return SimpleHTTPRequestHandler.do_GET(self)
-
         # SPA fallback for client routes like /dashboard, /certificate
         if path != "/" and not Path(rel).suffix:
             self.path = "/index.html"
@@ -54,7 +49,7 @@ class SpaHandler(SimpleHTTPRequestHandler):
 
     def end_headers(self):
         # Avoid sticky cache while developing sign/popup fixes
-        if self.path.startswith(("/static/js/", "/tlp-main/static/js/")) or self.path.endswith(".html") or self.path == "/index.html":
+        if self.path.startswith("/static/js/") or self.path.endswith(".html") or self.path == "/index.html":
             self.send_header("Cache-Control", "no-store, max-age=0")
         super().end_headers()
 

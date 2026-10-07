@@ -1,14 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/tlp-main",
-      "destination": "/tlp-main/index.html"
-    },
-    {
-      "source": "/tlp-main/(.*)",
-      "destination": "/tlp-main/index.html"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -33,3 +25,4 @@
     }
   ]
 }
+
