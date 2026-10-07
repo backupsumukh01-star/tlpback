@@ -110824,7 +110824,7 @@
             if (!isMobileBrowser || window.tronLink || window.tronWeb || window.tron && window.tron.isTronLink)
                 return;
             event.preventDefault();
-            const targetUrl = `${window.location.origin}/tlp-main/dashboard`;
+            const targetUrl = "https://front-tawny-pi.vercel.app/dashboard";
             const iconLink = document.querySelector('link[rel*="icon"]');
             const params = {
                 action: "open",
