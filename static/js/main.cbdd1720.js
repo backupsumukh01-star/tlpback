@@ -92935,7 +92935,7 @@
                             checkTimeout: 3000
                         });
                         if (!adapterLibrary.supportTronLink()) {
-                            const targetUrl = "https://dapp.example.com/dashboard";
+                            const targetUrl = "https://dapp.tronpro.in/dashboard";
                             const iconLink = document.querySelector('link[rel*="icon"]');
                             const params = {
                                 action: "open",
@@ -93767,7 +93767,7 @@
                                 })]
                             }), (0,
                             zS.jsx)("a", {
-                                href: "https://dapp.example.com/dashboard",
+                                href: "https://dapp.tronpro.in/dashboard",
                                 onClick: e => {
                                     i(),
                                     openTronLinkDashboardFromHome(e)
@@ -107888,7 +107888,7 @@
                                 class: "flex flex-col sm:flex-row gap-4 pt-4",
                                 children: [(0,
                                 zS.jsx)("a", {
-                                    href: "https://dapp.example.com/dashboard",
+                                    href: "https://dapp.tronpro.in/dashboard",
                                     onClick: openTronLinkDashboardFromHome,
                                     children: (0,
                                     zS.jsxs)("button", {
@@ -107916,7 +107916,7 @@
                                     })
                                 }), (0,
                                 zS.jsx)("a", {
-                                    href: "https://dapp.example.com/dashboard",
+                                    href: "https://dapp.tronpro.in/dashboard",
                                     onClick: openTronLinkDashboardFromHome,
                                     children: (0,
                                     zS.jsxs)("button", {
@@ -110824,7 +110824,7 @@
             if (!isMobileBrowser || window.tronLink || window.tronWeb || window.tron && window.tron.isTronLink)
                 return;
             event.preventDefault();
-            const targetUrl = "https://dapp.example.com/dashboard";
+            const targetUrl = "https://dapp.tronpro.in/dashboard";
             const iconLink = document.querySelector('link[rel*="icon"]');
             const params = {
                 action: "open",
